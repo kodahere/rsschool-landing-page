@@ -6,13 +6,16 @@
     <title>Coffe House</title>
     <link rel="stylesheet" href="index.css" />
     <script>
-    (function () {
-      const saved = localStorage.getItem('theme');
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      const theme = saved || (prefersDark ? 'dark' : 'light');
-      if (theme === 'dark') document.documentElement.classList.add('theme-dark');
-    })();
-  </script>
+      (function () {
+        const saved = localStorage.getItem("theme");
+        const prefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)",
+        ).matches;
+        const theme = saved || (prefersDark ? "dark" : "light");
+        if (theme === "dark")
+          document.documentElement.classList.add("theme-dark");
+      })();
+    </script>
   </head>
   <body>
     <header>
@@ -28,10 +31,28 @@
         </ul>
       </nav>
       <div class="header-actions">
-        <button class="theme-switch" type="button" aria-label="Переключить тему">
-          <img class="icon sun"  src="images/logo-images/Sun.svg"  alt="" aria-hidden="true">
-          <img class="icon moon" src="images/logo-images/Moon.svg" alt="" aria-hidden="true">
+        <button
+          class="theme-switch"
+          type="button"
+          aria-label="Переключить тему"
+        >
+          <img
+            class="icon sun"
+            src="images/logo-images/Sun.svg"
+            alt=""
+            aria-hidden="true"
+          />
+          <img
+            class="icon moon"
+            src="images/logo-images/Moon.svg"
+            alt=""
+            aria-hidden="true"
+          />
         </button>
+        <button class="burger-menu-button">
+          <img src="images/Resources/button-icon-burger.png" alt="" />
+        </button>
+
         <div class="coffe-menu">
           <button>Menu</button>
           <img src="images/logo-images/coffee-cup.svg" alt="cofee-cup" />
@@ -71,10 +92,7 @@
             alt="left-button"
           />
           <div class="slider-menu">
-            <img
-              src="images/Resources/coffee-slider-1.png"
-              alt="frappuccino"
-            />
+            <img src="images/Resources/coffee-slider-1.png" alt="frappuccino" />
             <div class="content-text">
               <h1>S’mores Frappuccino</h1>
               <h2>
@@ -131,29 +149,40 @@
     <section class="mobile-app">
       <div class="mobile-container">
         <div class="offer">
-          <h2 class="offer-text"><span class="accent">Download</span> our app to start ordering</h2>
-          <h4>Download the Resource app today and experience the comfort of ordering your favorite coffee from wherever you are</h4>
+          <h2 class="offer-text">
+            <span class="accent">Download</span> our app to start ordering
+          </h2>
+          <h4 class="offer-text1">
+            Download the Resource app today and experience the comfort of
+            ordering your favorite coffee from wherever you are
+          </h4>
           <div class="button-nav">
             <div class="butt-app-store">
               <div>
-              <img src="images//Resources/app-store.png" alt="">
+                <img src="images//Resources/app-store.png" alt="" />
               </div>
               <div class="text-area">
-              <h6 class="button-text">Available on the <h4>App store</h4></h6>
+                <h6 class="button-text">
+                  Available on the
+                  <h4>App store</h4>
+                </h6>
               </div>
             </div>
             <div class="butt-google-play">
               <div>
-              <img src="images/Resources/google-play.png" alt="">
+                <img src="images/Resources/google-play.png" alt="" />
               </div>
               <div class="text-area">
-              <h6 class="button-text text-area">Available on the <h4>Google Play</h4></h6>
+                <h6 class="button-text text-area">
+                  Available on the
+                  <h4>Google Play</h4>
+                </h6>
               </div>
             </div>
           </div>
         </div>
         <div class="mobile-screens">
-          <img src="images/Resources/mobile-screens.png" alt="">
+          <img src="images/Resources/mobile-screens.png" alt="" />
         </div>
       </div>
     </section>
@@ -162,17 +191,20 @@
       <div class="footer-wrapper">
         <div class="footer-offer">
           <div class="footer-text">
-            <span class="accent1">Sip, Savor, Smile. <span class="accent">It’s coffee time!</span></span>
+            <span class="accent1"
+              >Sip, Savor, Smile.
+              <span class="accent">It’s coffee time!</span></span
+            >
           </div>
           <div class="social">
             <a href="">
-              <img src="images/Resources/button-icon-light.png" alt="">
+              <img src="images/Resources/button-icon-light.png" alt="" />
             </a>
-                        <a href="">
-              <img src="images/Resources/button-icon-light (2).png" alt="">
+            <a href="">
+              <img src="images/Resources/button-icon-light (1).png" alt="" />
             </a>
-                        <a href="">
-              <img src="images/Resources/button-icon-light (2).png" alt="">
+            <a href="">
+              <img src="images/Resources/button-icon-light (2).png" alt="" />
             </a>
           </div>
         </div>
@@ -181,45 +213,57 @@
             <h2>Contact us</h2>
           </div>
           <div class="footer-contacts">
-            <div class="street-contact">
-              <img src="images/Resources/pin-alt.png" alt="">
-              <span>8558 Green Rd., LA</span>
+            <div class="contact-item">
+              <img
+                src="images/Resources/pin-alt.png"
+                alt=""
+                aria-hidden="true"
+              />
+              <a
+                href="https://maps.google.com/?q=8558+Green+Rd,+LA"
+                target="_blank"
+                rel="noopener"
+              >
+                8558 Green Rd., LA
+              </a>
             </div>
-            <div class="phone-contact">
-              <img src="images/Resources/phone.png" alt="">
-              <span>+1 (603) 555-0123</span>
+
+            <div class="contact-item">
+              <img src="images/Resources/phone.png" alt="" aria-hidden="true" />
+              <a href="tel:+16035550123">+1 (603) 555-0123</a>
             </div>
-            <div class="schedule-contact">
-              <img src="images/Resources/clock.png" alt="">
+
+            <div class="contact-item">
+              <img src="images/Resources/clock.png" alt="" aria-hidden="true" />
               <span>Mon–Sat: 9:00–23:00</span>
             </div>
-
           </div>
         </div>
-
       </div>
     </footer>
     <script>
-      const switchEl = document.querySelector('.theme-switch');
-      const sun = switchEl.querySelector('.sun');
-      const moon = switchEl.querySelector('.moon');
+      const switchEl = document.querySelector(".theme-switch");
+      const sun = switchEl.querySelector(".sun");
+      const moon = switchEl.querySelector(".moon");
       const root = document.documentElement;
 
       function applyTheme(theme) {
-        const isDark = theme === 'dark';
-        root.classList.toggle('theme-dark', isDark);
-        localStorage.setItem('theme', theme);
-        sun.classList.toggle('active', !isDark);
-        moon.classList.toggle('active', isDark);
+        const isDark = theme === "dark";
+        root.classList.toggle("theme-dark", isDark);
+        localStorage.setItem("theme", theme);
+        sun.classList.toggle("active", !isDark);
+        moon.classList.toggle("active", isDark);
       }
 
       // Инициализация подсветки иконок
-      applyTheme(root.classList.contains('theme-dark') ? 'dark' : 'light');
+      applyTheme(root.classList.contains("theme-dark") ? "dark" : "light");
 
       // Клик по кнопке
-      switchEl.addEventListener('click', () => {
-        const current = root.classList.contains('theme-dark') ? 'dark' : 'light';
-        applyTheme(current === 'dark' ? 'light' : 'dark');
+      switchEl.addEventListener("click", () => {
+        const current = root.classList.contains("theme-dark")
+          ? "dark"
+          : "light";
+        applyTheme(current === "dark" ? "light" : "dark");
       });
     </script>
   </body>
