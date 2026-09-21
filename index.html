@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coffe House</title>
     <link rel="stylesheet" href="index.css" />
+    <script>
+    (function () {
+      const saved = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = saved || (prefersDark ? 'dark' : 'light');
+      if (theme === 'dark') document.documentElement.classList.add('theme-dark');
+    })();
+  </script>
   </head>
   <body>
     <header>
@@ -20,76 +28,199 @@
         </ul>
       </nav>
       <div class="header-actions">
-        <div class="theme-switch" data-theme="light">
-          <img
-            class="icon sun"
-            src="/images/logo-images/Sun.svg"
-            alt="sun"
-          />
-          <img
-            class="icon moon"
-            src="/images/logo-images/Moon.svg"
-            alt="moon"
-          />
-        </div>
+        <button class="theme-switch" type="button" aria-label="Переключить тему">
+          <img class="icon sun"  src="/images/logo-images/Sun.svg"  alt="" aria-hidden="true">
+          <img class="icon moon" src="/images/logo-images/Moon.svg" alt="" aria-hidden="true">
+        </button>
         <div class="coffe-menu">
           <button>Menu</button>
-          <img
-            src="/images/logo-images/coffee-cup.svg"
-            alt="cofee-cup"
-          />
+          <img src="/images/logo-images/coffee-cup.svg" alt="cofee-cup" />
         </div>
       </div>
     </header>
     <main>
-      <section>
-              <div class="hero-container">
-        <div class="hero-wrapper">
+      <section class="section-container">
+        <div class="hero-container">
+          <div class="hero-wrapper">
             <div class="hero-title">
-                <span class="accent">Enjoy</span> premium coffee at our charming cafe
+              <span class="accent">Enjoy</span> premium coffee at our charming
+              cafe
             </div>
             <div class="hero-title1">
-                <span class="accent1">With its inviting atmosphere and delicious coffee options, the Coffee&nbsp House Resource is a popular destination for coffee lovers and those seeking a warm and inviting space to enjoy their favorite beverage.</span>
+              <span class="accent1"
+                >With its inviting atmosphere and delicious coffee options, the
+                Coffee&nbsp House Resource is a popular destination for coffee
+                lovers and those seeking a warm and inviting space to enjoy
+                their favorite beverage.</span
+              >
             </div>
             <div class="hero-button">
-                <button class="button">Menu</button>
+              <button class="button">Menu</button>
             </div>
-        </div>
-      </div>
-      </section>
-    </main>
-      <section class="favorite-coffee">
-      <h6>Choose your <span class="accent">favorite</span> coffee</h6>
-        <div class="slider-wrapper">
-          <div class="slider">
-            <img class="left-button" src="/images/Resources/button-icon-dark.svg" alt="left-button">
-            <div class="slider-menu">
-              <img src="./images/Resources/coffee-slider-1.png" alt="frappuccino">
-              <div class="content-text">
-                <h1>S’mores Frappuccino</h1>
-                <h2>This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.</h2>
-                <h1>$5.50</h1>
-              </div>
-              <div class="slider-indicators">
-                <span class="indicator active" data-slide="0"></span>
-                <span class="indicator" data-slide="1"></span>
-                <span class="indicator" data-slide="2"></span>
-              </div>
-            </div>
-            <img class="right-button" src="/images/Resources/button-icon-dark (1).svg" alt="right-button">
           </div>
         </div>
       </section>
+    </main>
+    <section class="favorite-coffee">
+      <h6>Choose your <span class="accent">favorite</span> coffee</h6>
+      <div class="slider-wrapper">
+        <div class="slider">
+          <img
+            class="left-button"
+            src="/images/Resources/button-icon-dark.svg"
+            alt="left-button"
+          />
+          <div class="slider-menu">
+            <img
+              src="./images/Resources/coffee-slider-1.png"
+              alt="frappuccino"
+            />
+            <div class="content-text">
+              <h1>S’mores Frappuccino</h1>
+              <h2>
+                This new drink takes an espresso and mixes it with brown sugar
+                and cinnamon before being topped with oat milk.
+              </h2>
+              <h1>$5.50</h1>
+            </div>
+            <div class="slider-indicators">
+              <span class="indicator active" data-slide="0"></span>
+              <span class="indicator" data-slide="1"></span>
+              <span class="indicator" data-slide="2"></span>
+            </div>
+          </div>
+          <img
+            class="right-button"
+            src="/images/Resources/button-icon-dark (1).svg"
+            alt="right-button"
+          />
+        </div>
+      </div>
+    </section>
 
-      <section class="about">
-      </section>
+    <section class="about">
+      <h2>
+        Resource is the <span class="accent">perfect and cozy place</span> where
+        you can enjoy a variety of hot beverages, relax, catch up with friends,
+        or get some work done.
+      </h2>
+      <div class="collage">
+        <img
+          class="image_collage item1"
+          src="/images/Resources/about-1.jpg"
+          alt=""
+        />
+        <img
+          class="image_collage item2"
+          src="/images/Resources/about-3.jpg"
+          alt=""
+        />
+        <img
+          class="image_collage item3"
+          src="/images/Resources/about-2.jpg"
+          alt=""
+        />
+        <img
+          class="image_collage item4"
+          src="/images/Resources/about-4.jpg"
+          alt=""
+        />
+      </div>
+    </section>
 
-      <section class="mobile-app">
+    <section class="mobile-app">
+      <div class="mobile-container">
+        <div class="offer">
+          <h2 class="offer-text"><span class="accent">Download</span> our app to start ordering</h2>
+          <h4>Download the Resource app today and experience the comfort of ordering your favorite coffee from wherever you are</h4>
+          <div class="button-nav">
+            <div class="butt-app-store">
+              <div>
+              <img src="/images//Resources/app-store.png" alt="">
+              </div>
+              <div class="text-area">
+              <h6 class="button-text">Available on the <h4>App store</h4></h6>
+              </div>
+            </div>
+            <div class="butt-google-play">
+              <div>
+              <img src="/images/Resources/google-play.png" alt="">
+              </div>
+              <div class="text-area">
+              <h6 class="button-text text-area">Available on the <h4>Google Play</h4></h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mobile-screens">
+          <img src="/images/Resources/mobile-screens.png" alt="">
+        </div>
+      </div>
+    </section>
 
-      </section>
+    <footer class="contacts">
+      <div class="footer-wrapper">
+        <div class="footer-offer">
+          <div class="footer-text">
+            <span class="accent1">Sip, Savor, Smile. <span class="accent">It’s coffee time!</span></span>
+          </div>
+          <div class="social">
+            <a href="">
+              <img src="/images/Resources/button-icon-light.png" alt="">
+            </a>
+                        <a href="">
+              <img src="/images/Resources/button-icon-light (2).png" alt="">
+            </a>
+                        <a href="">
+              <img src="/images/Resources/button-icon-light (2).png" alt="">
+            </a>
+          </div>
+        </div>
+        <div class="contact-info">
+          <div>
+            <h2>Contact us</h2>
+          </div>
+          <div class="footer-contacts">
+            <div class="street-contact">
+              <img src="/images/Resources/pin-alt.png" alt="">
+              <span>8558 Green Rd., LA</span>
+            </div>
+            <div class="phone-contact">
+              <img src="/images/Resources/phone.png" alt="">
+              <span>+1 (603) 555-0123</span>
+            </div>
+            <div class="schedule-contact">
+              <img src="/images/Resources/clock.png" alt="">
+              <span>Mon–Sat: 9:00–23:00</span>
+            </div>
 
-      <footer class="contacts">
+          </div>
+        </div>
 
-      </footer>
+      </div>
+    </footer>
+    <script>
+      const switchEl = document.querySelector('.theme-switch');
+      const sun = switchEl.querySelector('.sun');
+      const moon = switchEl.querySelector('.moon');
+      const root = document.documentElement;
+
+      function applyTheme(theme) {
+        const isDark = theme === 'dark';
+        root.classList.toggle('theme-dark', isDark);
+        localStorage.setItem('theme', theme);
+        sun.classList.toggle('active', !isDark);
+        moon.classList.toggle('active', isDark);
+      }
+
+      // Инициализация подсветки иконок
+      applyTheme(root.classList.contains('theme-dark') ? 'dark' : 'light');
+
+      // Клик по кнопке
+      switchEl.addEventListener('click', () => {
+        const current = root.classList.contains('theme-dark') ? 'dark' : 'light';
+        applyTheme(current === 'dark' ? 'light' : 'dark');
+      });
+    </script>
   </body>
 </html>
