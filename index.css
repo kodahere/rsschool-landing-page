@@ -1,0 +1,231 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #e1d4c9;
+}
+
+
+header {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr; /* Три колонки: левая, по центру, правая */
+  align-items: center; /* Выравнивание по вертикали */
+  padding: 20px 40px;
+}
+
+.logo img {
+  height: 50px; 
+  width: 75px; /* Ширина подстроится автоматически с сохранением пропорций */
+}
+
+.nav {
+  align-items: center;
+  font-family: "Inter", sans-serif;
+  font-weight: 550;
+  font-style: normal;
+  font-size: clamp(12px, 1.2vw + 8px, 16px);
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+
+.nav ul {
+  display: flex; 
+  list-style: none; /* Убираем стандартные точки у списка */
+  gap: 40px;
+}
+
+.header-actions {
+  display: flex;
+  justify-content: right;
+  gap: 24px;
+}
+
+.theme-switch {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 88px; /* ширина всего переключателя */
+  height: 44px; /* высота */
+  padding: 3px;
+  border: 1px solid #cbb8a9; /* тонкая рамка как на макете */
+  border-radius: 999px; /* полностью скруглённые края */
+  background: #e1d4c9; /* светлый фон */
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.theme-switch .sun {
+  background-color: #c9a992;
+}
+
+.coffe-menu {
+  align-self: center;
+  gap: 2px;
+}
+
+.coffe-menu button {
+  width: 44px;
+  height: 22px;
+  border: none;
+  background-color: #e1d4c9;
+}
+
+/* общий стиль для иконок */
+.theme-switch .icon {
+  width: 36px;
+  height: 36px;
+  padding: 5px; /* чтобы иконка не прилипала к краю круга */
+  border-radius: 50%;
+  box-sizing: border-box;
+  transition:
+    background 0.25s,
+    transform 0.25s;
+}
+
+.hero-container {
+  background: url("images/Resources/img-hero.jpg") center / cover no-repeat;
+  border-radius: 30px;
+  min-height: 100vh;
+  margin: 20px 40px 100px 40px;
+}
+
+.hero-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 100px 730px 100px 100px;
+  gap: 40px;
+}
+
+.hero-title {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: clamp(32px, 4vw + 16px, 72px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: #efe6dd; /* цвет всего текста (кроме Enjoy) */
+  max-width: 530px;
+  margin: 0;
+}
+
+.accent {
+  color: #c9a992;
+  font-style: italic; /* курсив, как на макете */
+}
+
+.hero-title1 .accent1 {
+  color: #dfccbc;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5; /* 150% */
+  letter-spacing: 0; /* 0%, но без знака % */
+}
+
+.hero-button .button {
+  border: none;
+  width: 200px;
+  height: 64px;
+  padding: 20px 78px;
+  border-radius: 100px;
+  opacity: 1;
+  background: #e1d4c9;
+  outline: none;
+  border: 0;
+}
+
+.favorite-coffee {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.favorite-coffee h6 {
+  color: #403f3d;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 60px;
+  line-height: 1.5; /* 150% */
+  letter-spacing: 0; /* 0%, но без знака % */
+}
+
+.favorite-coffee {
+  display: flex;
+  flex-direction: column;
+  padding: 0 40px 0 40px;
+  position: relative;
+}
+
+.slider-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 1360px;
+}
+
+.slider {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 480px;
+  gap: 16px;
+}
+
+.content-text h1 {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.25; /* 150% */
+  color: #403f3d;
+  letter-spacing: 0;
+}
+
+.content-text h2 {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5; /* 150% */
+  color: #403f3d;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.slider-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 12px; /* Расстояние между линиями */
+  padding-top: 40px;
+}
+
+.indicator {
+  display: inline-block;
+  width: 40px;          /* Длина линии */
+  height: 4px;          /* Толщина линии */
+  background-color: #c4b5a6; /* Цвет неактивной линии */
+  border-radius: 2px;   /* Скругление углов */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Плавный переход цвета */
+}
+
+/* Стиль для активной линии */
+.indicator.active {
+  background-color: #695e53; /* Темный цвет активной линии */
+}
