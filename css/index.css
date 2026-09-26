@@ -141,16 +141,27 @@ header {
   padding: 20px 40px 0 40px;
 }
 .hero-container {
-  background: url("../images/Resources/img-hero.jpg") center / cover no-repeat;
+  position: relative;       
   border-radius: 30px;
+  overflow: hidden;         
   width: 100%;
-  /* height: 100%; */
   max-width: 100%;
-  /* object-fit: cover; */
+}
+
+.hero-image {
+  position: absolute;
+  inset: 0;               
+  width: 100%;
+  height: 100%;
+  object-fit: cover;      
+  object-position: center;
+  z-index: 0;             
 }
 
 .hero-wrapper {
   display: flex;
+  position: relative;
+  z-index: 1;
   flex-direction: column;
   padding: clamp(40px, 8vw, 100px);
   max-width: 730px;
