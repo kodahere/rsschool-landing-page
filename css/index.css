@@ -141,7 +141,7 @@ header {
   padding: 20px 40px 0 40px;
 }
 .hero-container {
-  background: url("/images/Resources/img-hero.jpg") center / cover no-repeat;
+  background: url("../images/Resources/img-hero.jpg") center / cover no-repeat;
   border-radius: 30px;
   width: 100%;
   /* height: 100%; */
