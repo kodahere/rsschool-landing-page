@@ -4,24 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coffe House</title>
-    <link rel="stylesheet" href="index.css">
-    <script>
-      (function () {
-        const saved = localStorage.getItem("theme");
-        const prefersDark = window.matchMedia(
-          "(prefers-color-scheme: dark)",
-        ).matches;
-        const theme = saved || (prefersDark ? "dark" : "light");
-        if (theme === "dark")
-          document.documentElement.classList.add("theme-dark");
-      })();
-    </script>
+    <link rel="stylesheet" href="css/index.css">
   </head>
   <body>
     <header>
-      <div class="logo">
-        <img src="images/logo-images/logo.png" alt="Coffee House logo">
-      </div>
+        <a href="index.html" class="logo" aria-label="Coffee House - на главную">
+          <img src="images/logo-images/logo.png" alt="Coffee House logo">
+        </a>
       <nav class="nav">
         <ul>
           <li><a href="#favorite-coffee">Favorite coffee</a></li>
@@ -39,13 +28,13 @@
           <img
             class="icon sun"
             src="images/logo-images/Sun.svg"
-            alt=""
+            alt="sun"
             aria-hidden="true"
           >
           <img
             class="icon moon"
             src="images/logo-images/Moon.svg"
-            alt=""
+            alt="moon"
             aria-hidden="true"
           >
         </button>
@@ -57,8 +46,10 @@
           <img src="images/Resources/button-icon-burger.png" alt="burger">
       </button>
 
-        <div class="coffee-menu">
-          <button type="button">Menu</button>
+        <div class="coffee-menu" >
+            <a href="catalog.html" class="logo" aria-label="Coffee House - на главную">
+              Menu
+            </a>
           <img
             src="images/logo-images/coffee-cup.svg"
             alt="coffee cup"
@@ -204,16 +195,16 @@
             >
           </div>
           <div class="social">
-            <a href="#" aria-label="Facebook">
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">
               <img src="images/Resources/facebook.png" alt="Facebook">
             </a>
-            <a href="#" aria-label="Instagram">
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
               <img
                 src="images/Resources/instagram.png"
                 alt="Instagram"
               >
             </a>
-            <a href="#" aria-label="Twitter">
+            <a href="https://x.com/" target="_blank" rel="noopener" aria-label="Twitter">
               <img
                 src="images/Resources/twitter.png"
                 alt="Twitter"
@@ -246,35 +237,12 @@
 
             <div class="contact-item">
               <img src="images/Resources/clock.png" alt="" aria-hidden="true">
-              <span>Mon–Sat: 9:00–23:00</span>
+              <span class="schedule-time">Mon–Sat: 9:00–23:00</span>
             </div>
           </div>
         </div>
       </div>
     </footer>
-
-    <script>
-      const switchEl = document.querySelector(".theme-switch");
-      const sun = switchEl.querySelector(".sun");
-      const moon = switchEl.querySelector(".moon");
-      const root = document.documentElement;
-
-      function applyTheme(theme) {
-        const isDark = theme === "dark";
-        root.classList.toggle("theme-dark", isDark);
-        localStorage.setItem("theme", theme);
-        sun.classList.toggle("active", !isDark);
-        moon.classList.toggle("active", isDark);
-      }
-
-      applyTheme(root.classList.contains("theme-dark") ? "dark" : "light");
-
-      switchEl.addEventListener("click", () => {
-        const current = root.classList.contains("theme-dark")
-          ? "dark"
-          : "light";
-        applyTheme(current === "dark" ? "light" : "dark");
-      });
-    </script>
+    <script src="js/common.js"></script>
   </body>
 </html>
