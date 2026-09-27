@@ -8,7 +8,7 @@ let currentCategory = "coffee";
 // подгрузка моего Json файла
 async function loadProducts() {
   try {
-    const response = await fetch("../js/products.json");
+    const response = await fetch("js/products.json");
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
 
     const data = await response.json();
