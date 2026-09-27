@@ -358,12 +358,53 @@ header {
   flex: 1 1 auto;
   min-width: 0;
   max-width: 100%;
+  transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
 .slider-menu img {
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+.slider-menu.fade-out-left {
+  opacity: 0;
+  transform: translateX(-40px);
+}
+
+.slider-menu.fade-out-right {
+  opacity: 0;
+  transform: translateX(40px);
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slider-menu.slide-in-right {
+  animation: slideInFromRight 0.4s ease;
+}
+
+.slider-menu.slide-in-left {
+  animation: slideInFromLeft 0.4s ease;
 }
 
 .content-text {
@@ -375,6 +416,34 @@ header {
   max-width: 480px;
   gap: 16px;
   text-align: center;
+}
+
+.coffee-name {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.25;
+  color: var(--text);
+  letter-spacing: 0;
+}
+
+.coffee-desc {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--muted);
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.coffee-price {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.25;
+  color: var(--text);
+  letter-spacing: 0;
 }
 
 .content-text h1 {
