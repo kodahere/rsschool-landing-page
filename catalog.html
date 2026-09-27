@@ -43,6 +43,7 @@
           class="burger-menu-button"
           type="button"
           aria-label="Открыть меню"
+          id="burger-toggle"
         >
           <img src="images/Resources/button-icon-burger.png" alt="burger">
       </button>
@@ -56,7 +57,22 @@
         </div>
       </div>
     </header>
-
+        <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <nav class="mobile-nav">                <!-- ← вот он, отдельный класс -->
+          <ul>
+            <li><a href="#favorite-coffee">Favorite coffee</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#mobile-app">Mobile app</a></li>
+            <li><a href="#contact-us">Contact us</a></li>
+            <li>
+              <a href="catalog.html" class="mobile-menu-link">
+                Menu
+                <img src="images/logo-images/coffee-cup.svg" alt="">
+              </a>
+            </li>
+          </ul>
+      </nav>
+    </div>
     <main>
         <section class="menu-wrapper">
             <div class="menu-container">
