@@ -4,6 +4,7 @@ const rightBtn = document.querySelector(".right-button");
 
 let slides = [];
 let currentSlide = 0;
+let isAnimating = false;
 
 async function loadSlides() {
   try {
@@ -11,11 +12,19 @@ async function loadSlides() {
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
 
     slides = await response.json();
+    preloadImages();
     renderSlide(currentSlide);
   } catch (err) {
     console.error("Ошибка загрузки слайдов:", err);
     sliderMenu.innerHTML = `<p class="error">Не удалось загрузить слайды</p>`;
   }
+}
+
+function preloadImages() {
+  slides.forEach((slide) => {
+    const img = new Image();
+    img.src = slide.img;
+  });
 }
 
 function renderSlide(index) {
@@ -54,6 +63,9 @@ function attachIndicatorHandlers() {
 }
 
 function goToSlide(index, direction = "right") {
+  if (isAnimating) return;
+  isAnimating = true;
+
   currentSlide = (index + slides.length) % slides.length;
 
   sliderMenu.classList.add(
@@ -69,6 +81,8 @@ function goToSlide(index, direction = "right") {
     sliderMenu.classList.add(
       direction === "right" ? "slide-in-right" : "slide-in-left"
     );
+
+    isAnimating = false;
   }, 250);
 }
 

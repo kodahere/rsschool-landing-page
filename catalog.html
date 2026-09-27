@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coffee House</title>
     <link rel="stylesheet" href="css/catalog.css">
+    <link rel="icon" type="image/png" href="images/logo-images/1114350.png">
   </head>
   <body>
     <header>
@@ -176,6 +177,46 @@
         </div>
       </div>
     </footer>
+
+    <div class="modal" id="modal" aria-hidden="true">
+  <div class="modal-overlay" data-close></div>
+  <div class="modal-content" role="dialog" aria-modal="true">
+    <div class="modal-body">
+          <img class="modal-image" id="modal-image" src="" alt="">
+
+          <div class="modal-info">
+            <h2 class="modal-name" id="modal-name"></h2>
+            <p class="modal-desc" id="modal-desc"></p>
+
+            <div class="modal-group">
+              <h3 class="modal-label">Size</h3>
+              <div class="modal-options" id="modal-sizes"></div>
+            </div>
+
+            <div class="modal-group">
+              <h3 class="modal-label">Additives</h3>
+              <div class="modal-options" id="modal-additives"></div>
+            </div>
+
+            <div class="modal-total">
+              <span>Total:</span>
+              <span id="modal-price">$0.00</span>
+            </div>
+
+            <div class="modal-note">
+              <span class="modal-note-icon">i</span>
+              <p>
+                The cost is not final. Download our mobile app to see the final price
+                and place your order. Earn loyalty points and enjoy your favorite
+                coffee with up to 20% discount.
+              </p>
+            </div>
+
+            <button class="modal-close-btn" data-close>Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="js/common.js"></script>
     <script src="js/catalog.js"></script>
