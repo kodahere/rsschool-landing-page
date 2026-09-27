@@ -207,6 +207,13 @@ header {
   background: var(--btn-bg);
   color: var(--text);
   cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.hero-button .button:hover {
+  transform: scale(1.15);
+  opacity: 0.7;
 }
 
 .favorite-coffee {
@@ -532,6 +539,16 @@ header {
 
 .burger-menu-button {
   display: none;
+}
+
+.left-button, .right-button {
+  cursor: pointer;
+   transition: all 0.3s;
+  
+}
+
+.left-button:hover, .right-button:hover {
+  transform: scale(1.05);
 }
 
 @media (max-width: 768px) {
