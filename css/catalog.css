@@ -101,6 +101,8 @@ header {
   color: var(--text);
   text-decoration: none;
   transition: color 0.3s;
+  font-weight: 600;
+  line-height: 150%;
 }
 
 .header-actions {
