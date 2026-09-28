@@ -28,6 +28,8 @@ function preloadImages() {
 }
 
 function renderSlide(index) {
+  if (!sliderMenu) return;
+
   const slide = slides[index];
   if (!slide) return;
 
@@ -86,7 +88,7 @@ function goToSlide(index, direction = "right") {
   }, 250);
 }
 
-leftBtn.addEventListener("click", () => goToSlide(currentSlide - 1, "left"));
-rightBtn.addEventListener("click", () => goToSlide(currentSlide + 1, "right"));
+leftBtn?.addEventListener("click", () => goToSlide(currentSlide - 1, "left"));
+rightBtn?.addEventListener("click", () => goToSlide(currentSlide + 1, "right"));
 
 loadSlides();

@@ -124,8 +124,6 @@ header {
   background: transparent;
   width: 44px;
   height: 22px;
-  border: none;
-  background-color: transparent;
   color: var(--text);
   cursor: pointer;
   text-decoration: none;
@@ -315,8 +313,11 @@ header {
 .favorite-coffee {
   margin-top: 100px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 0 40px 0 40px;
+  position: relative;
 }
 
 .favorite-coffee h6 {
@@ -326,13 +327,6 @@ header {
   font-size: 60px;
   line-height: 1.5;
   letter-spacing: 0;
-}
-
-.favorite-coffee {
-  display: flex;
-  flex-direction: column;
-  padding: 0 40px 0 40px;
-  position: relative;
 }
 
 .slider-wrapper {
@@ -356,6 +350,7 @@ header {
   justify-content: center;
   align-items: center;
   flex: 1 1 auto;
+  min-width: 0;
   max-width: 100%;
   transition: opacity 0.25s ease, transform 0.25s ease;
 }
@@ -789,10 +784,6 @@ header {
   .contact-info {
     padding: 0 60px 100px 60px;
   }
-
-  .coffee-menu {
-    display: none;
-  }
 }
 
 @media (max-width: 381px) {
@@ -802,10 +793,6 @@ header {
 
   .hero-wrapper {
     padding: 60px 16px 60px 16px;
-  }
-
-  .coffee-menu {
-    display: none;
   }
 
   .section-container {

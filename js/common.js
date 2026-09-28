@@ -40,7 +40,7 @@ function openMenu() {
   mobileMenu.classList.add("open");
   burgerToggle.classList.add("is-open");
   burgerToggle.setAttribute("aria-label", "Закрыть меню");
-  mobileMenu.setAttribute("aria-hidden", "false");
+  mobileMenu.setAttribute("aria-hidden");
   document.body.classList.add("menu-open");
 }
 

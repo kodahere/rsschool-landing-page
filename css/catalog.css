@@ -363,7 +363,6 @@ header {
   flex-direction: column;
   gap: 8px;
   border-radius: 16px;
-  border: 5px;
 }
 
 .product-name {
@@ -558,7 +557,9 @@ header {
   width: 100%;
   max-height: 90vh;
   overflow-y: auto;
+  overflow-x: hidden;
   padding: 20px;
+  box-sizing: border-box;
   z-index: 1;
 }
 
@@ -571,7 +572,6 @@ header {
 .modal-image {
   width: 340px;
   height: 340px;
-  aspect-ratio: 1 / 1;
   object-fit: contain;
   border-radius: 40px;
   flex-shrink: 0;
@@ -584,6 +584,7 @@ header {
   gap: 20px;
   flex: 1;
   padding-right: 10px;
+  min-width: 0;
 }
 
 .modal-name {
@@ -773,70 +774,6 @@ header {
   .refresh-svg {
     display: flex;
   }
-
-  .modal {
-    padding: 8px;
-  }
-
-  .modal-content {
-    padding: 16px;
-    border-radius: 30px;
-    max-height: 95vh;
-    max-width: 100%;
-  }
-
-  .modal-body {
-    flex-direction: row;
-    gap: 16px;
-    align-items: stretch;
-  }
-
-  .modal-image {
-    width: 340px;
-    height: 340px;
-    aspect-ratio: 1 / 1;
-    object-fit: contain;
-    border-radius: 24px;
-    flex-shrink: 0;
-    background: var(--border);
-  }
-
-  .modal-info {
-    padding-right: 0;
-    gap: 12px;
-  }
-
-  .modal-name {
-    font-size: 20px;
-  }
-
-  .modal-desc {
-    font-size: 14px;
-  }
-
-  .modal-option {
-    font-size: 14px;
-    padding: 6px 12px 6px 6px;
-  }
-
-  .modal-option .option-badge {
-    width: 26px;
-    height: 26px;
-    font-size: 12px;
-  }
-
-  .modal-total {
-    font-size: 20px;
-  }
-
-  .modal-note {
-    font-size: 13px;
-  }
-
-  .modal-close-btn {
-    height: 48px;
-    font-size: 15px;
-  }
 }
 
 @media (max-width: 480px) {
@@ -847,6 +784,9 @@ header {
   .large-title {
     font-size: 32px;
     padding: 0 0 40px 0;
+  }
+    .modal-image {
+    display: none;
   }
 }
 
@@ -882,66 +822,5 @@ header {
   .contact-info .schedule-time {
     font-size: 16px;
     font-weight: 600;
-  }
-
-  .modal-content {
-    padding: 12px;
-    border-radius: 24px;
-  }
-
-  .modal-body {
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .modal-image {
-    display: none;
-  }
-
-  .modal-name {
-    font-size: 18px;
-  }
-
-  .modal-desc {
-    font-size: 13px;
-  }
-
-  .modal-label {
-    font-size: 14px;
-  }
-
-  .modal-option {
-    font-size: 13px;
-    padding: 5px 10px 5px 5px;
-    gap: 6px;
-  }
-
-  .modal-option .option-badge {
-    width: 22px;
-    height: 22px;
-    font-size: 11px;
-  }
-
-  .modal-total {
-    font-size: 18px;
-    margin-top: 16px;
-    padding-top: 16px;
-  }
-
-  .modal-note {
-    font-size: 12px;
-    gap: 8px;
-  }
-
-  .modal-note-icon {
-    width: 20px;
-    height: 20px;
-    font-size: 12px;
-  }
-
-  .modal-close-btn {
-    height: 44px;
-    font-size: 14px;
-    margin-top: 16px;
   }
 }
