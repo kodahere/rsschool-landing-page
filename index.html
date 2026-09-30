@@ -1,10 +1,11 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coffe House</title>
     <link rel="stylesheet" href="css/index.css">
+    <link rel="icon" type="image/png" href="images/logo-images/1114350.png">
   </head>
   <body>
     <header>
@@ -28,13 +29,13 @@
           <img
             class="icon sun"
             src="images/logo-images/Sun.svg"
-            alt="sun"
+            alt=""
             aria-hidden="true"
           >
           <img
             class="icon moon"
             src="images/logo-images/Moon.svg"
-            alt="moon"
+            alt=""
             aria-hidden="true"
           >
         </button>
@@ -42,9 +43,11 @@
           class="burger-menu-button"
           type="button"
           aria-label="Открыть меню"
+          id="burger-toggle"
         >
-          <img src="images/Resources/button-icon-burger.png" alt="burger">
-      </button>
+          <img class="burger-icon burger-open" src="images/Resources/button-icon-burger.png" alt="">
+          <img class="burger-icon burger-close" src="images/Resources/button-icon-burger.svg" alt="">
+        </button>
 
         <div class="coffee-menu" >
             <a href="catalog.html" class="logo" aria-label="Coffee House - на главную">
@@ -52,11 +55,27 @@
             </a>
           <img
             src="images/logo-images/coffee-cup.svg"
-            alt="coffee cup"
+            alt=""
           >
         </div>
       </div>
     </header>
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <nav class="mobile-nav">
+          <ul>
+            <li><a href="#favorite-coffee">Favorite coffee</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#mobile-app">Mobile app</a></li>
+            <li><a href="#contact-us">Contact us</a></li>
+            <li>
+              <a href="catalog.html" class="mobile-menu-link">
+                Menu
+                <img src="images/logo-images/coffee-cup.svg" alt="">
+              </a>
+            </li>
+          </ul>
+      </nav>
+    </div>
     <main>
       <section class="section-container">
         <div class="hero-container">
@@ -75,7 +94,9 @@
               >
             </p>
             <div class="hero-button">
-              <a href="catalog.html" class="button">Menu</a>
+              <a href="catalog.html" class="button">Menu
+                <img src="images/logo-images/coffee-cup.svg" alt="coffee cup">
+              </a>   
             </div>
           </div>
         </div>
@@ -91,24 +112,8 @@
             src="images/Resources/button-icon-dark.svg"
             alt="Previous slide"
           >
-          <div class="slider-menu">
-            <img
-              src="images/Resources/coffee-slider-1.png"
-              alt="S’mores Frappuccino"
-            >
-            <div class="content-text">
-              <p class="coffee-name">S’mores Frappuccino</p>
-              <p class="coffee-desc">
-                This new drink takes an espresso and mixes it with brown sugar
-                and cinnamon before being topped with oat milk.
-              </p>
-              <p class="coffee-price">$5.50</p>
-            </div>
-            <div class="slider-indicators">
-              <span class="indicator active" data-slide="0"></span>
-              <span class="indicator" data-slide="1"></span>
-              <span class="indicator" data-slide="2"></span>
-            </div>
+          <div class="slider-menu" id="slider-menu">
+
           </div>
           <img
             class="right-button"
@@ -197,18 +202,18 @@
           </div>
           <div class="social">
             <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">
-              <img src="images/Resources/facebook.png" alt="Facebook">
+              <img src="images/Resources/facebook.png" alt="">
             </a>
             <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
               <img
                 src="images/Resources/instagram.png"
-                alt="Instagram"
+                alt=""
               >
             </a>
             <a href="https://x.com/" target="_blank" rel="noopener" aria-label="Twitter">
               <img
                 src="images/Resources/twitter.png"
-                alt="Twitter"
+                alt=""
               >
             </a>
           </div>
@@ -245,5 +250,7 @@
       </div>
     </footer>
     <script src="js/common.js"></script>
+    <script src="js/main.js"></script>
+
   </body>
 </html>
