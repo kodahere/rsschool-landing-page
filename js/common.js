@@ -30,18 +30,24 @@ moon.addEventListener("click", (e) => {
   applyTheme("dark");
 });
 
-// burger menu: 
-
 const burgerToggle = document.getElementById("burger-toggle");
 const mobileMenu = document.getElementById("mobile-menu");
 const mobileNavLinks = document.querySelectorAll(".mobile-nav a");
 
+let scrollPosition = 0;
+
 function openMenu() {
+  scrollPosition = window.scrollY;
+
   mobileMenu.classList.add("open");
   burgerToggle.classList.add("is-open");
   burgerToggle.setAttribute("aria-label", "Закрыть меню");
-  mobileMenu.setAttribute("aria-hidden");
+  mobileMenu.removeAttribute("aria-hidden");
+
   document.body.classList.add("menu-open");
+  document.body.style.position = "fixed";
+  document.body.style.top = `-${scrollPosition}px`;
+  document.body.style.width = "100%";
 }
 
 function closeMenu() {
@@ -49,7 +55,13 @@ function closeMenu() {
   burgerToggle.classList.remove("is-open");
   burgerToggle.setAttribute("aria-label", "Открыть меню");
   mobileMenu.setAttribute("aria-hidden", "true");
+
   document.body.classList.remove("menu-open");
+  document.body.style.position = "";
+  document.body.style.top = "";
+  document.body.style.width = "";
+
+  window.scrollTo(0, scrollPosition);
 }
 
 function toggleMenu() {
